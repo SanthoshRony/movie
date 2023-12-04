@@ -1,7 +1,6 @@
 
 body{
-  background-image: linear-gradient(to bottom, rgba(0, 128, 0, 0.20), rgba(0, 128, 0, 0.20)),
-    url('blackjack.jpg');
+  background-image: linear-gradient(to bottom, rgba(0, 128, 0, 0.20), rgba(0, 128, 0, 0.20));
   text-align: center;
   margin-top : 140px;
   font-family: arial sans-serif;
