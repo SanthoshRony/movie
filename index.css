@@ -63,17 +63,39 @@ p{
   font-weight: 550;
 
 }
+@media (max-width:1535px) {
+  body{
+    background-image: no-repeat;
+    text-align: center;
+
+}
+@media (max-width:1460px) {
+  body{
+    background-image: no-repeat;
+    text-align: center;
+
+}
+@media (max-width:1340px) {
+  body{
+    background-image: no-repeat;
+    text-align: center;
+
+}
+@media (max-width:1195px) {
+  body{
+    background-image: no-repeat;
+    text-align: center;
+
+}
+@media (max-width:990px) {
+  body{
+    background-image: no-repeat;
+    text-align: center;
+
+}
 @media (max-width:680px) {
   body{
     background-image: no-repeat;
-
-  }
-  h1{
-    font-size: 60px;
-    margin-top: 600px;
-  }
-  p{
-    font-size: 32px;
-  }
+    text-align: center;
 
 }
