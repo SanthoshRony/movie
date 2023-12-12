@@ -3,7 +3,6 @@ body{
   background-image: linear-gradient(to bottom, rgba(0, 128, 0, 0.20), rgba(0, 128, 0, 0.20)),
     url('blackjack.jpg');
   text-align: center;
-  margin-top : 200px;
   font-family: arial sans-serif;
   background-size:  cover;
   background-position: auto;
@@ -68,6 +67,7 @@ p{
     background-image: no-repeat;
     text-align: center;
 
+    }
 }
 @media (max-width:1460px) {
   body{
@@ -75,11 +75,13 @@ p{
     text-align: center;
 
 }
+}
 @media (max-width:1340px) {
   body{
     background-image: no-repeat;
     text-align: center;
 
+   }
 }
 @media (max-width:1195px) {
   body{
@@ -87,15 +89,25 @@ p{
     text-align: center;
 
 }
+}
 @media (max-width:990px) {
   body{
     background-image: no-repeat;
     text-align: center;
 
 }
+}
 @media (max-width:680px) {
   body{
     background-image: no-repeat;
     text-align: center;
 
+}
+  h1{
+    font-size : 40px;
+    
+  }
+  p{
+    font-size : 17px;
+  }
 }
