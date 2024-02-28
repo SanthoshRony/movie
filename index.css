@@ -1,115 +1,83 @@
-
 body{
-  background-color: #004d1a;
+
+  font-family: serif;
+  background-color: black;
+}
+.search{
   text-align: center;
-  margin-top : 200px;
-  font-family: arial sans-serif;
-  background-size:  cover;
-  background-position: auto;
-  height: -webkit-fill-available;
-  background-position: center;
-  overflow-y: hidden;
+  margin-top : 30px;
+  margin-bottom : 30px;
+
 }
-h1{
-  color:goldenrod;
-  font-size: 50px;
+
+.search-input{
+  font-family: arial;
+  width : 70%;
+  box-sizing: border-box;
+  padding : 20px;
+  border: none;
+  background-color: #3a3a3a9d;
+  font-weight: lighter;
+  height: 50px;
+  border-radius: 5px;
+  color:white;
+  cursor: pointer;
 
 
 }
 
-p{
-
-  color : white;
-  font-size: 22px;
-}
-#player-el{
-  padding-top: 15px;
-}
-#message{
-  font-style:italic;
-}
-.game{
-  color:#016f32;
-  width:150px;
-  background:goldenrod;
+.search-input:focus{
+  outline:none;
   border:none;
-  border-radius : 2px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  font-weight: 550;
 }
-.card{
-  margin-top: 20px;
-  color:#016f32;
-  width:150px;
-  background:goldenrod;
-  border:none;
-  border-radius : 2px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  font-weight: 550;
-}
-#rbutton{
+.btn{
 
-  margin-top: 20px;
-  color:#016f32;
-  width:150px;
-  background:goldenrod;
-  border:none;
-  border-radius : 2px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  font-weight: 550;
+  width : 15%;
+  height: 50px;
+  background-color: dodgerblue;
+  color: white;
+  font-family: sans-serif;
+  font-weight:normal;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 
 }
-@media (max-width:1535px) {
-  body{
-    background-image: no-repeat;
-    text-align: center;
+.container .content1 p {
+    display: none;
+}
 
-    }
+.container{
+  color:white;
+  text-align: center;
+  text-transform: uppercase;
 }
-@media (max-width:1460px) {
-  body{
-    background-image: no-repeat;
-    text-align: center;
+#title{
+  font-size: 25px;
+}
+.poster{
+  width: 300px;
+}
+.content1{
+  text-transform: capitalize;
+  text-align: left;
+  margin-left: 100px;
+  margin-top: 50px;
+  margin-bottom: 40px;
+  margin-right: 100px;
+  font-style: oblique;
+}
+@media (min-width:900px) {
+  .content1{
+    margin-left: 635px;
+    margin-right: 300px;
+  }
+  .search-input{
+    width: 50%;
+  }
+  .photo{
 
-}
-}
-@media (max-width:1340px) {
-  body{
-    background-image: no-repeat;
-    text-align: center;
+  }
 
-   }
-}
-@media (max-width:1195px) {
-  body{
-    background-image: no-repeat;
-    text-align: center;
-
-}
-}
-@media (max-width:990px) {
-  body{
-    background-image: no-repeat;
-    text-align: center;
-
-}
-}
-@media (max-width:680px) {
-  body{
-    background-image: no-repeat;
-    text-align: center;
-
-
-}
-  @media (max-width:480px) {
-  body{
-    background-image: no-repeat;
-    text-align: center;
-
-
-}
- 
 }
