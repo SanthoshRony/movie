@@ -1,88 +1,47 @@
-let cards = []
-let sum = 0
-let hasblackjack = false
-let isalive = false
-let message = ""
-let messageEl = document.getElementById("message-el")
-let sumEl = document.getElementById("sum-el")
-let cardsEl = document.getElementById("cards-el")
+let api = "https://www.omdbapi.com/?apikey=c960406b&t="
+let title = document.getElementById("title")
+let poster = document.getElementById("poster")
+let director = document.getElementById("director")
+let actor = document.getElementById("actors")
+let collections = document.getElementById("collection")
+let description = document.getElementById("description")
+let awards = document.getElementById("awards")
+let writer = document.getElementById("writer")
+let ratings = document.getElementById("ratings")
+let date = document.getElementById("released")
+let genre = document.getElementById("genre")
+let year = document.getElementById("year")
+let post = document.getElementById("post")
 
-let player = {
-  rule : "Canon",
-  won : "You'll get blackjack when sum becomes to 21."
-}
-let name = document.getElementById("player-el")
-name.innerHTML = player.rule + " : " + player.won
-
-///////
-function getrandomcard(){
-  let  randomnumber = Math.floor(Math.random()*13)+1
-  if (randomnumber===1){
-    return 11
-  }
-  else if(randomnumber>10){
-    return 10
-  }
-else{
-    return randomnumber
-  }
+function showMovieDetails() {
+   let paragraphs = document.querySelectorAll('.container .content1 p');
+    paragraphs.forEach(function(paragraph) {
+        paragraph.style.display = 'block';
+    });
 }
 
-let get = getrandomcard()
-console.log(get)
+function searchmovie() {
+   let movie = document.getElementById("moviename")
+   fetch(api+movie.value).then((data)=>{
+     return data.json()
+   }).then((data)=>{
+      title.innerText = data.Title || "Baaney extralu deng... ra😆";
+      director.innerText = data.Director ||"❔";
+      actor.innerText = data.Actors ||"❔";
+      collections.innerText = data.BoxOffice ||"❔";
+      description.innerText = data.Plot ||"❔";
+      awards.innerText = data.Awards ||"❔";
+      writer.innerText = data.Writer ||"❔";
+      ratings.innerText = data.imdbRating ||"❔";
+      date.innerText = data.Released ||"❔";
+      genre.innerText = data.Genre ||"❔";
+      year.innerText = data.Year ||"❔";
+      post.src = data.Poster;
 
-///////
 
 
+    showMovieDetails();
 
-//////
-function startgame() {
-  name.innerHTML = "" +"Admin : This game is now on testing purpose #SanthoshRony"
-  isalive = true
-  let firstcard = getrandomcard()
-  let secondcard = getrandomcard()
-  let cards = [firstcard,secondcard]
-  let sum = firstcard + secondcard
-  rendergame()
-
-}
-///////
-function rendergame(){
-sumEl.innerHTML = "sum : " + sum
-cardsEl.innerHTML = "cards : "
-
-for (let i=0;i<cards.length;i++){
-  cardsEl.innerHTML = cardsEl.innerHTML + cards[i] +" "
-}
-
-if (sum <= 20){
-  message = "Do you want to draw a new card 🤔🤔?"
-}
-else if (sum===21){
-  message = "Wohoo! you have got blackjack 🥳🥳!"
-  hasblackjack = true
+   })
 
 }
-else{
-  message = "Opps! You are out of the game ☹️☹️!"
-  isalive = false
-
-
-
-}
-messageEl.innerHTML =message
-}
-/////////
-function newcard() {
-    if (isalive===true && hasblackjack===false){
-       let card = getrandomcard()
-       sum = sum + card
-       cards.push(card)
-       rendergame()
-    }
-
-}
-function refresh() {
-   location.reload()
-}
-//////
