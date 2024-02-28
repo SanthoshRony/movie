@@ -2,21 +2,43 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Blackjack</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOVIE</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Dancing+Script&family=Gentium+Book+Plus&family=Itim&family=Lobster&family=Merienda:wght@300&family=Monoton&family=Open+Sans:wght@300;400&family=Playfair+Display&family=Shrikhand&display=swap" rel="stylesheet">
+
   </head>
   <body>
-    <h1>🃏 Blackjack 🃏</h1>
-    <p id = "message-el">Want to play a round ?</p>
-    <p id = "cards-el">Cards : </p>
-    <p id = "sum-el">Sum : </p>
-    <button class = "game" onclick = "startgame()">START GAME</button>
-    <br>
-    <button class = "card" onclick = "newcard()">NEW CARD</button>
-    <br>
-    <button id="rbutton" onclick="refresh()" >REFRESH</button>
-    <p id = "player-el"></p>
-   <script type="text/javascript" src = "index.js"></script>
+  <div class="search">
+    <input type="text" id= "moviename" class="search-input" value="" placeholder = "SEARCH MOVIE HERE ">
+    <button type="button" onclick="searchmovie()" class = "btn" name="button">search</button>
+
+  </div>
+
+  <div class="container">
+    <div class = "content">
+      <h1 id="title"></h1>
+    </div>
+    <img class= "poster"  id = "poster" src="" alt="">
+    <img class="photo" src="moo1.jpg" id = "post" alt="">
+    <div class="content1">
+      <p>director : <span id = "director"></span></p>
+      <p>actors : <span id = "actors"></span></p>
+      <p>year : <span id = "year"></span></p>
+      <p>box office collections : <span id = "collection"></span></p>
+      <p>description : <span id = "description"></span></p>
+      <p>awards : <span id = "awards"></span></p>
+      <p>writer : <span id = "writer"></span></p>
+      <p>imdb rating : <span id = "ratings"></span></p>
+      <p>released on : <span id = "released"></span></p>
+      <p>genre : <span id = "genre"></span></p>
+
+
+    </div>
+</div>
+
+  <script type="text/javascript" src = "index.js"></script>
   </body>
 </html>
